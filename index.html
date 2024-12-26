@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Or Dare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+      <p>Get ready for a game of</p>
+      <h1>TRUTH OR DARE</h1>
+    </header>
+    <main>
+      <section id="pick1">
+        <label>Pick Your Set</label>
+        <section id="sets">
+          <button class="set" type="button" onclick="chooseSet(1)">
+            <div class="childset">
+              <div class="background back1"></div>
+              <div class="conset">
+                <p>Set 1: Basic - Level 1 (Baby Mode)</p>
+              </div>
+            </div>
+          </button>
+          <button class="set" type="button" onclick="chooseSet(2)">
+            <div class="childset">
+              <div class="background back2"></div>
+              <div class="conset">
+                <p>Set 2: Basic - Level 2 (Recommended)</p>
+              </div>
+            </div>
+          </button>
+          <button class="set" type="button" onclick="chooseSet(3)">
+            <div class="childset">
+              <div class="background back3"></div>
+              <div class="conset">
+                <p>Set 3: Basic - Level 3 (Extreme)</p>
+              </div>
+            </div>
+          </button>
+          <button class="set" type="button" onclick="chooseSet(4)">
+            <div class="childset">
+              <div class="background back4"></div>
+              <div class="conset">
+                <p>Set 4: Coming Soon</p>
+              </div>
+            </div>
+          </button>
+          <button class="set" type="button" onclick="chooseSet(5)">
+            <div class="childset">
+              <div class="background back5"></div>
+              <div class="conset">
+                <p>Set 5: Coming Soon</p>
+              </div>
+            </div>
+          </button>
+        </section>
+        <label id="displayset">Set: </label>
+      </section>
+      <section id="pick2">
+        <label>Enter the names of the player</label><br>
+        <input type="text" placeholder="Name" id="inputname"><br>
+        <div id="btndiv">
+          <button onclick="addtolist()" class="btn1">Add</button>
+          <button onclick="startGame()" class="btn1">Done</button>
+          <button onclick="clearName()" class="btn1">Clear</button>
+        </div>
+        <div id="divname">
+          <p id="showdata"></p>
+        </div>
+        <label id="errormessage"></label>
+        <form>
+          <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+          <input type="number" id="number" value="4" />
+          <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+        </form>
+      </section>
+      <section id="start1">
+        <p>Each player has the opportunity to play according to the order given</p>
+        <p id="showorder"></p>
+        <button onclick="startactualGame()">Start</button>
+      </section>
+      <section id="start2">
+        <section>
+          <div id="cards">
+            <div class="cardchild" id= "truth">
+              <p>TRUTH</p>
+            </div>
+            <div class="cardchild" id="dare">
+              <p>DARE</p>
+            </div>
+          </div>
+          <button type="button" class="btn2" id="draw" onclick="drawCard()">Draw</button>
+          <div id="result">
+            <p>Your Truth/Dare:</p>
+            <p id="resultp"></p>
+          </div>
+        </section>
+        <section id="order">
+          <label>Round: <label id="showround"></label></label>
+          <ol id="olname"></ol>
+          <label id="showdone"></label>
+        </section>
+      </section>
+    </main>
+</body>
+</html>
