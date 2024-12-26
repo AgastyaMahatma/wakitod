@@ -354,7 +354,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 600px) {
-  #cards {
+  #cards, #order, #result, .btn2 {
     width: calc(100vw - 40px);
   }
 
@@ -364,15 +364,10 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .btn2 {
-    width: calc(100vw - 40px);
     font-size: 30px;
   }
 
   #start2 {
     flex-direction: column;
-  }
-
-  #order {
-    width: calc(100vw - 40px);
   }
 }
