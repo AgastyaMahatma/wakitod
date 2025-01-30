@@ -185,6 +185,7 @@ let todsets = [
       "Give fake backshots to ",
       "Flirt with touching to ",
       "Send a heart emoji to your crush",
+        "Sing a song",
       "Let the players choose"
     ]
   },
