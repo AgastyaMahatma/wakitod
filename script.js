@@ -86,10 +86,6 @@ function startactualGame() {
   document.getElementById("showround").innerHTML = numround;
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 let todsets = [
   { truth: [
       "What is your most embarrassing moment?",
@@ -248,6 +244,10 @@ let todsets = [
     ]
   }
 ];
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function drawCard() {
   // Highlight and dishighlight
